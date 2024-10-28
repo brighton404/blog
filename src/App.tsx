@@ -9,7 +9,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Router>
       <Routes>
-        <Route path="blog" element={<Blog />} />
+      <Route path="/" element={<Blog />} />
+        <Route path="blog/" element={<Blog />} />
         <Route path="blog/:id" element={<BlogPage />} />
       </Routes>
       </Router>
