@@ -1,6 +1,6 @@
 ---
 title: Dummy text: Lorem Ipsum
-date: 2024-10-28
+date: 2024-10-10
 author: Lorem Ipsum
 categories: [1, 3]
 ---
