@@ -17,7 +17,7 @@ export function BlogList({ posts, categories = [] }: BlogListProps) {
       {posts.map((post) => (
         <Link 
           key={post.id}
-          to={`md/${post.id}`}
+          to={`/${post.id}`}
           className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
         >
           <article>
