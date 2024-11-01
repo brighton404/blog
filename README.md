@@ -1,30 +1,106 @@
-# React + TypeScript + Vite
+# Vite TypeScript Markdown Blog Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **Vite** and **TypeScript**-based web application that hosts and displays blog posts written in **Markdown**. Markdown files are scanned from the `src/content` directory, parsed for metadata (title, date, author, and categories), and then rendered on the site. The project is ideal for static hosting on platforms like **GitHub Pages** and supports client-side rendering, which automatically reflects new blog posts added to the content folder.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+root
+├── src
+│   ├── content          # Markdown files for blog posts
+│   │   ├── example.md   # Example blog post with metadata
+│   │   └── ...
+│   ├── components
+│   │   ├── BlogList.tsx # Component to list blogs
+│   │   └── ...
+│   ├── App.tsx          # Main app file
+│   └── ...
+├── public
+│   └── index.html       # Root HTML file
+├── package.json
+└── README.md
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/brighton404/blog.git
+   cd blog
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   bun install
+   ```
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+## Usage
+
+### Adding New Blog Posts
+
+1. Place new markdown files (`.md`) in the `src/content` directory.
+2. Each markdown file should begin with metadata written in **YAML front matter**:
+
+   ```markdown
+   ---
+   title: Dummy text
+   date: 2024-10-28
+   author: Lorem Ipsum
+   categories: [1, 3]
+   ---
+   ```
+
+   - **title**: The title of the blog post.
+   - **date**: The publish date of the blog post.
+   - **author**: The name of the author.
+   - **categories**: An array of category IDs.
+
+### Metadata Parsing
+
+The application automatically scans all `.md` files in `src/content` and extracts the metadata for each post. This data is then passed to the `BlogList.tsx` component, where it is displayed in a list format on the website.
+
+### Blog List Component
+
+The `BlogList.tsx` component collects and displays the metadata extracted from each markdown file, rendering a dynamic, client-side list of blog posts. New blog files added to `src/content` are scanned automatically, and the list updates to include them.
+
+## Deployment
+
+This app is optimized for deployment on GitHub Pages or any other static hosting solution that supports client-side rendering.
+
+To deploy to GitHub Pages:
+
+1. Update the `base` configuration in `vite.config.ts` to match your GitHub repository's path.
+2. Build the project:
+   ```bash
+   npm run build
+   ```
+3. Deploy to GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
+
+## Technologies Used
+
+- **Vite**: A fast build tool for front-end development.
+- **TypeScript**: Type-safe language to improve reliability.
+- **Markdown**: For writing blog content.
+- **React**: For building the UI.
+
+## Future Improvements
+
+- Adding pagination for large numbers of blog posts.
+- Improving SEO by adding meta tags dynamically from blog metadata.
+- Supporting additional metadata fields in the front matter.
+
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements.
