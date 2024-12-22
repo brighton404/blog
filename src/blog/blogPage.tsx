@@ -81,7 +81,7 @@ export function BlogPage() {
         <div className="text-center py-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">Post not found</h2>
           <Link 
-            to="/" 
+            to="/blog" 
             className="text-blue-500 hover:underline"
           >
             Return to blog list
