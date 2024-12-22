@@ -59,6 +59,7 @@ root
    ---
    ```
 
+   - **Id**: The blog post Id to prevent conflicts.
    - **title**: The title of the blog post.
    - **date**: The publish date of the blog post.
    - **author**: The name of the author.
