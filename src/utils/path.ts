@@ -1,4 +1,4 @@
-// utils/path.ts
+// I dont remember where i wanted to use this
 
 /**
  * Joins multiple path segments into one normalized path.
@@ -25,4 +25,3 @@ export function join(...paths: string[]): string {
   export function resolve(relativePath: string): string {
     return new URL(relativePath, window.location.origin).href;
   }
-  

@@ -1,3 +1,4 @@
+/* Useless Component on client side rendering */
 import React, { useState } from 'react';
 import { BlogPost, Category, NewComment } from '@/blog/types';
 import { formatDate } from '@/utils/formatDate';

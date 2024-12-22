@@ -1,4 +1,5 @@
 ---
+id: lorem ipsum
 title: Dummy text: Lorem Ipsum
 date: 2024-10-28
 author: Lorem Ipsum

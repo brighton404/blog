@@ -1,7 +1,7 @@
 // blog.tsx
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getBlogPosts } from '@/utils/blogUtils';
+import { getBlogPosts } from '@/utils/utils';
 import { BlogList } from '@/components/BlogList';
 import { categories } from './data';
 import Header from '@/components/header';

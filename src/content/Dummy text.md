@@ -1,4 +1,5 @@
 ---
+id: dummy text
 title: Dummy text
 date: 2024-10-28
 author: Lorem Ipsum

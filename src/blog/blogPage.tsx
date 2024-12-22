@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { getPostById } from '@/utils/blogUtils';
+import { getPostById } from '@/utils/utils';
 import ReactMarkdown from 'react-markdown';
 import type { ReactNode } from 'react';
 import Header from '@/components/header';

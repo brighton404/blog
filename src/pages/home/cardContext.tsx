@@ -1,4 +1,4 @@
-// src/context/CardContext.tsx
+// you dont need this, it does something else on where i integrated this app
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 // Define the type for the context value
